@@ -6,7 +6,7 @@ import {Entity, Scene} from 'aframe-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {Map} from './map';
+import Map from './map';
 
 class App extends React.Component {
   constructor(props) {
