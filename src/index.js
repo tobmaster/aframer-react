@@ -11,10 +11,9 @@ AFRAME.registerComponent("draw", drawComponent.component);
 import 'aframe-htmltexture-component';
 
 import MeetupScreen from './components/meetup-screen';
-
+import MeetupDetails from './components/meetup-details';
 import Map from './map';
 import Environment from './environment';
-import DetailView from './detailView';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,26 +22,35 @@ class App extends React.Component {
 
   }
 
-  changeColor() {
-    const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
-    this.setState({
-      color: colors[Math.floor(Math.random() * colors.length)]
-    });
-  }
-
   render () {
+      const meetupEntity =  {
+          "name": "Berlin.js",
+          "location": "co.up",
+          "coordinates": {
+              "latitude": "52.500330",
+              "longitude": "13.419786"
+          },
+          "description": "This is some description",
+          "time": "19:00",
+          "day": "Every 3rd Thursday",
+          "nextMeetup": "2017-11-13T21:41:21.952Z",
+          "twitter": "berlinjs",
+          "id": "9ea4cdb8-e18b-44c2-9b58-252395d7d5cd",
+          "url": "https://www.meetup.com/Berlin-JS/"
+      };
+
     return (
       <Scene>
           <a-assets>
               <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"/>
               <img id="skyTexture" src="https://ucarecdn.com/7e11b7c7-0e1d-4720-88c9-ea40ef4f3be0/"/>
-              <div id="meetuppage">
-                  <h1 color="#00ff00">Friends!</h1>
-              </div>
+
         </a-assets>
 
+          <MeetupDetails meetup={meetupEntity} />
+          <MeetupScreen>
+          </MeetupScreen>
         <Environment />
-        <DetailView />
         <Map />
 
         <Entity primitive="a-camera">
