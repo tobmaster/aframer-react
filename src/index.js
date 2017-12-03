@@ -1,10 +1,11 @@
-import 'aframe';
+import AFRAME from 'aframe';
 import 'aframe-animation-component';
 import 'aframe-particle-system-component';
 import 'babel-polyfill';
 import {Entity, Scene} from 'aframe-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import drawComponent from 'aframe-draw-component';
 
 import {Map} from './map';
 import DetailView from './detailView';
@@ -13,6 +14,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {color: 'red'};
+
+    AFRAME.registerComponent("draw", drawComponent)
   }
 
   changeColor() {
@@ -26,9 +29,15 @@ class App extends React.Component {
     return (
       <Scene>
         <a-assets>
-          <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"/>
-          <img id="skyTexture" src="https://ucarecdn.com/d75ef4b1-2ecb-4cbf-9398-3bc969a0451a/"/>
+          <img crossOrigin="anonymous" alt="" id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"/>
+          <img crossOrigin="anonymous" alt="" id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg"/>
+            <div id="meetuppage">
+                <h1>Friends!</h1>
+                <img crossOrigin="anonymous" alt="" src="http://i.embed.ly/1/display/resize?url=http%3A%2F%2Fimg11.deviantart.net%2Fa121%2Fi%2F2014%2F244%2F1%2Fc%2Fstargazer_by_satania-d7xiu7g.png&animate=false&quality=90&grow=true&width=480&height=420&key=90eb0b46c1e146e5afbbe0279e77866b" />
+            </div>
         </a-assets>
+
+        <Entity primitive="a-plane" src="#meetuppage" position="0 3 -4" rotation="0 0 0" height="3" width="4"/>
 
         <Entity primitive="a-plane" src="#groundTexture" rotation="-90 0 0" height="100" width="100"/>
         <Entity primitive="a-light" type="ambient" color="#445451"/>
