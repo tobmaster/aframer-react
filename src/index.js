@@ -24,7 +24,7 @@ class App extends React.Component {
       <Scene>
         <a-assets>
           <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"/>
-          <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg"/>
+          <img id="skyTexture" src="https://ucarecdn.com/d75ef4b1-2ecb-4cbf-9398-3bc969a0451a/"/>
         </a-assets>
 
         <Entity primitive="a-plane" src="#groundTexture" rotation="-90 0 0" height="100" width="100"/>
