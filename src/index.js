@@ -33,20 +33,13 @@ class App extends React.Component {
   render () {
     return (
       <Scene>
-        <a-assets>
-          <img crossOrigin="anonymous" alt="" id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"/>
-          <img crossOrigin="anonymous" alt="" id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg"/>
-            <div id="meetuppage">
-                <h1 color="#00ff00">Friends!</h1>
-            </div>
+          <a-assets>
+              <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"/>
+              <img id="skyTexture" src="https://ucarecdn.com/7e11b7c7-0e1d-4720-88c9-ea40ef4f3be0/"/>
+              <div id="meetuppage">
+                  <h1 color="#00ff00">Friends!</h1>
+              </div>
         </a-assets>
-
-          
-        <Entity primitive="a-plane" src="#groundTexture" rotation="-90 0 0" height="100" width="100"/>
-        <Entity primitive="a-light" type="ambient" color="#445451"/>
-        <Entity primitive="a-light" type="point" intensity="2" position="2 4 4"/>
-        <Entity primitive="a-sky" height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"/>
-
 
         <Environment />
         <DetailView />
