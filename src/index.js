@@ -34,7 +34,7 @@ class App extends React.Component {
     return (
       <Scene>
           <a-assets>
-              <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"/>
+              <img id="groundTexture" src="https://ucarecdn.com/d4cf04b0-95e0-4b03-a005-f96040b1ad2f/"/>
               <img id="skyTexture" src="https://ucarecdn.com/7e11b7c7-0e1d-4720-88c9-ea40ef4f3be0/"/>
               <div id="meetuppage">
                   <h1 color="#00ff00">Friends!</h1>
