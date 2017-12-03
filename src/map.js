@@ -3,7 +3,7 @@ import {Entity} from 'aframe-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export class Map extends React.Component {
+export default class Map extends React.Component{
   constructor(props) {
     super(props);
   }

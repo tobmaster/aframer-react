@@ -12,7 +12,8 @@ import 'aframe-htmltexture-component';
 
 import MeetupScreen from './components/meetup-screen';
 
-import {Map} from './map';
+import Map from './map';
+import Environment from './environment';
 import DetailView from './detailView';
 
 class App extends React.Component {
@@ -46,6 +47,8 @@ class App extends React.Component {
         <Entity primitive="a-light" type="point" intensity="2" position="2 4 4"/>
         <Entity primitive="a-sky" height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"/>
 
+
+        <Environment />
         <DetailView />
         <Map />
 
