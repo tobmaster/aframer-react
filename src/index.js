@@ -48,8 +48,7 @@ class App extends React.Component {
         </a-assets>
 
           <MeetupDetails meetup={meetupEntity} />
-          <MeetupScreen>
-          </MeetupScreen>
+          <MeetupScreen/>
         <Environment />
         <Map />
 
