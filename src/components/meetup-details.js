@@ -7,7 +7,7 @@ export default class MeetupDetails extends React.Component {
         console.log(this.props);
         return <a-assets>
             <div id="meetuppage">
-                <h1 color="#00ff00">{meetup.name}</h1>
+                <h1>{meetup.name}</h1>
                 <p>
                     {meetup.description}
                 </p>

@@ -44,7 +44,6 @@ class App extends React.Component {
           <a-assets>
               <img id="groundTexture" src="https://ucarecdn.com/d4cf04b0-95e0-4b03-a005-f96040b1ad2f/"/>
               <img id="skyTexture" src="https://ucarecdn.com/7e11b7c7-0e1d-4720-88c9-ea40ef4f3be0/"/>
-
         </a-assets>
 
           <MeetupDetails meetup={meetupEntity} />
