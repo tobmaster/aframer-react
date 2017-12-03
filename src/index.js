@@ -13,7 +13,7 @@ import 'aframe-htmltexture-component';
 import MeetupScreen from './components/meetup-screen';
 import MeetupDetails from './components/meetup-details';
 import Map from './map';
-import Environment from './environment';
+import Environment from './components/environment';
 
 class App extends React.Component {
   constructor(props) {
